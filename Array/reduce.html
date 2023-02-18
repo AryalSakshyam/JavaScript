@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    <script>
+        const nums=[20,30,40,100,200]// first value accumulator ma baaki ko value current value ma jancha
+        const total=nums.reduce((accumulator,currentValue)=>{
+            console.log(`The accumultor is : ${accumulator}`)
+            console.log(`The Current value is : ${currentValue}`)
+            return accumulator+currentValue// yo value accumulator ma jancha 
+        },0)
+        document.write(`${total}`)
+        document.write(`<br>`)
+        //reduceRight--->right dekhi left
+        const num=[10,20,30,40,50]
+        const result=num.reduceRight((accumulator,currentValue)=>{
+            console.log(`The accumultor is : ${accumulator}`)
+            console.log(`The Current value is : ${currentValue}`)
+            return accumulator+currentValue
+        })
+        document.write(`${result}`)
+
+        document.write(`<br>`)
+        //every()---> sab condition thik hunu parcha// Same as And gate
+        const test=nums.every(num=>{
+            return num>30
+        })
+        document.write(`${test}`)
+        document.write(`<br>`)
+        //some()----> Same as Or Gate
+        const test1=nums.some(num=>{
+            return num>30
+        })
+        document.write(`${test1}`)
+
+
+    </script>
+</body>
+</html>

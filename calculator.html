@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <div>
+  <input type="text" id="input">
+</div>
+<div>
+  <button onclick="add()">+</button>
+  <button onclick="subtract()">-</button>
+  <button onclick="multiply()">*</button>
+  <button onclick="divide()">/</button>
+  <button onclick="Equal()">=</button>
+  <button onclick="clearInput()">Clear</button>
+</div>
+
+    <script>
+        let num1 = 0;
+let num2 = 0;
+let operator = '';
+let input = document.getElementById('input');
+
+function add() {
+  num1 = Number(input.value);
+  operator = '+';
+  input.value = '';
+}
+
+function subtract() {
+  num1 = Number(input.value);
+  operator = '-';
+  input.value = '';
+}
+
+function multiply() {
+  num1 = Number(input.value);
+  operator = '*';
+  input.value = '';
+}
+
+function divide() {
+  num1 = Number(input.value);
+  operator = '/';
+  input.value = '';
+}
+
+function Equal() {
+  num1 = Number(input.value);
+  operator = '=';
+  input.value = '';
+}
+
+function clearInput() {
+  input.value = '';
+}
+
+function calculate() {
+  num2 = Number(input.value);
+  let result = 0;
+  switch(operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+      
+  }
+  input.value = result;
+  num1 = 0;
+  num2 = 0;
+  operator = '';
+}
+
+    </script>
+    
+</body>
+</html>

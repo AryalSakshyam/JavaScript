@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+        const text="Welcome to Durshikshya to read progaramming concept of morden era. "
+        document.write(`${text} <br>`)
+        // to count the number of character in string use lenght 
+        document.write(`${text.length} <br>`)
+        // to find position of specific character /string in a string use index of()
+        document.write(`${text.indexOf('to')} <br>`)
+        document.write(`${text.lastIndexOf('to')}<br>`)
+
+        // Substring-> small part of string
+        // slice(start,end)-> slice(0,20)
+        //substring(start,end)->substring(0,20)
+        // substring(start,lenght)->substr(5,30)
+        document.write(`${text.slice(0,25)}..............<br>`)
+        document.write(`${text.substring(5,30)}..............<br>`)
+        document.write(`${text.substr(10,30)}..............<br>`)
+        //replace(),replaceAll(),toLowerCase(),toUpperCase(),trim(),trimStart(),trimEnd(),split(),concat()
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        
+        const news=[
+            {postTitle:'FirstTitle', postContent:' this is a first content'},
+            {postTitle:'SecondTitle',postContent:' this is a Second content'},
+            {postTitle:'ThirdTitle',postContent:' this is a third content'}
+            
+            
+
+        ]
+        // define the function
+        const showNews=()=>{
+               setTimeout(()=>{
+                let result=""
+                news.forEach(data=>{
+                    result+=`<li> ${data.postTitle}
+                        <ul><li> ${data.postContent}</li>
+                            </ul>
+                        </li>`
+
+                })
+                // div ma result print garya 
+                document.querySelector('div').innerHTML=result
+            },1000)
+        }
+        // Call the function
+        showNews()
+        //define function
+        const addNews=(post)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    news.push(post)
+
+                    const error=false
+                    if(!error){
+                        resolve()
+                    }
+                    else{
+                        // yo value .catch(err) ma jancha
+                        reject('error:something went wrong')
+                    }
+                },3000)
+
+
+            })
+        }
+        addNews({postTitle:'Fourth title',postContent:' this a fourth content'})
+        //resolve aba aako value lai catch garcha
+        //.then catches showNews
+        //resolve
+        .then(showNews)
+        //error catch garcha
+        // err function define garda ko parameter
+        //reject
+        .catch((err)=>console.log(err))//backen maa kaam lagcha
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+        switch(new Date().getDay()){
+            case 0://string cha bhaney('')use garney
+                document.write('Sunday')
+                break//yo condition ma rokincha
+            case 1:
+                document.write('Monday')
+                break
+            case 2:
+                document.write('Tuesday')
+                break
+            case 3:
+                document.write('Wednesday')
+                break
+            case 4:
+                document.write('Thrusday')
+                break
+            case 5:
+                document.write('Friday')
+                break
+            case 6:
+                document.write('Saturday')
+                break
+            default:
+                document.write('Invalid Operation')
+        }
+       document.write(`<br>`)
+        const x= parseInt(prompt('Enter value of X'))
+        const y= parseInt(prompt('Enter Value of Y'))
+        const z=prompt('Assign Opertator')
+         switch(z){
+            case '+':
+                document.write('Addition')
+                break 
+            case '-':
+                document.write('Subtraction')
+                break 
+            case '/':
+                document.write('Divison')
+                break 
+         }
+            
+    </script>
+</body>
+</html>

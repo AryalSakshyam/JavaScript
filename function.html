@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <pre>
+        function is block of code to perform the particular task.
+        Advantage of function is it can be resume many times
+        funnction are called using parenthesis().
+        eg functionName()<!---duita name jodiney bittikai second name ko first letter capital--->
+    </pre>
+    <script>
+        //define the function
+        // function demoFunction(){
+        //     document.write('This is function')
+        // }
+
+
+        //Morden Java script 
+
+        const demoFunction=()=>{//Arrow function(=>)
+            document.write('This is function')
+
+        }
+        // call the function
+        demoFunction()
+
+
+        document.write('<br>')
+        // Function with Argument
+        //define
+        // const addFunction=(num1,num2)=>{
+        //     document.write(num1+num2)
+        // }
+        // addFunction(20,10)//pass garya value Argumnet ho . 
+       
+
+        function addFunction(a,b){
+            document.write(a+b)
+        }
+        addFunction(30,40)
+        document.write('<br>')
+        // Function With return type
+
+        const subFunction=(a,b)=>{
+            return a-b
+        }
+
+        // Call the Function
+        const result= subFunction(30,10)
+        document.write(`The value is ${result}<br>`)
+
+
+        const test= subFunction(100,50)
+        document.write(`The new value is${test}`)
+        
+
+    </script>
+</body>
+</html>
