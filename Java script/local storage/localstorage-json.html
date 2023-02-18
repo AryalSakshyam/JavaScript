@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage And JSON</title>
+</head>
+
+<body>
+    <script>
+        //-------------------(  key ,         value          )
+        localStorage.setItem('data', 'this is a local storage')
+        const show = localStorage.getItem('data')
+        console.log(`${show}`)
+        // try setItem,removeItem
+
+
+        // JSON-> javascript object notation
+        const student = {
+            'firstName': 'Sakshyam',
+            'lastname': 'Aryal',
+            'age': 22,
+            'gender': 'Male',
+            //Array---->[0       1        2            3          4]
+            'subjects': ['html', 'CSS', 'Bootstrap', 'javascript', 'react']
+        }
+
+        // convert Object to string----->JSON.stringify()
+
+        const obj_to_string = JSON.stringify(student)
+        localStorage.setItem('college', obj_to_string)
+
+        const show_data = localStorage.getItem('college')
+        // console.log(show_data.firstName)
+
+        // convert string to JSON
+        const data = JSON.parse(localStorage.getItem('college'))// object to string
+        console.log(data)// string print garna
+        console.log(data.firstName)
+        console.log(data.subjects[0])//subjects:[0,1,2,3,4]----> kunai euta halyo bhaney euta data print huncha
+       // call back , promise , asink away
+
+
+    </script>
+
+</body>
+
+</html>

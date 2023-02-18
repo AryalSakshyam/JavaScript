@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate form</title>
+</head>
+<body>
+    <label for="firstnum">First Number</label>
+    <input type="number" name="fnum" id="firstnum"><br>
+   <label for="secondnum">Second Number</label>
+    <input type="number" name="Snum" id="secondnum"><br>
+    <label for="operator">Choose Operator</label>
+    <select name="op" id="op">
+        <option value="+">addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+        <option value="%">Modulus</option>
+        <option value="**">Power</option>
+    </select><br>
+    <input type="submit" value="submit" onclick="calculate()">
+    <p id="result"></p>
+    <script>
+        const calculate=()=>{
+            const x=parseInt(document.getElementById('firstnum').value)
+            const y=parseInt(document.getElementById('secondnum').value)
+            const operator=document.getElementById('op').value
+            switch(operator){
+            case '+':
+                const a =x+y
+                document.querySelector('#result').innerHTML=`The addition is ${a}`//querselector-->CSS selector jasto same
+                break
+            case '-':
+                const b = x-y
+                document.querySelector('#result').innerHTML=`The subtraction is${b}`
+                break
+            case '*':
+                const c = x*y
+                document.querySelector('#result').innerHTML=`The Multiplication is${c}`
+                break
+            case '/':
+                const d = x/y
+                document.querySelector('#result').innerHTML=`The Divison is${d}`
+                break
+            case '%':
+                const e = x%y
+                document.querySelector('#result').innerHTML=`The Modulus is${e}`
+                break
+            case '**':
+                const f= x**y
+                document.querySelector('#result').innerHTML=`The ${x} to the power of ${y} is${f}`
+                break
+            default:
+                document.write(`Invalid`)
+
+        }
+    }
+    </script>
+</body>
+</html>

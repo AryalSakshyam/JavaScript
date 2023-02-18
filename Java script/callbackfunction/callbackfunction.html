@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back function</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        //callback function ---> function bhitra another function call or define
+        const news=[
+            {postTitle:'FirstTitle', postContent:' this is a first content'},
+            {postTitle:'SecondTitle',postContent:' this is a Second content'},
+            {postTitle:'ThirdTitle',postContent:' this is a third content'}
+            
+            
+
+        ]
+        // define the function
+        const showNews=()=>{
+            //settimeout=kunai certain time ma ecute huney
+            // function lai direct define garda kheri parenthesis rahkya
+            
+            setTimeout(()=>{
+                let result=""
+                news.forEach(data=>{
+                    result+=`<li> ${data.postTitle}
+                        <ul><li> ${data.postContent}</li>
+                            </ul>
+                        </li>`
+
+                })
+                // div ma result print garya 
+                document.querySelector('div').innerHTML=result
+            },1000)
+        }
+        // Call the function
+        showNews()
+        // define function addNews()
+        // const addNews=(post)=>{
+        //     setTimeout(()=>{
+        //         news.push(post)
+
+        //     },3000)
+
+        // }
+
+        // call the function addNews()
+        // addNews({postTitle:'Fourth title',postContent:' this a fourth content'})
+
+            // define the function
+            const addNews=(post,callbackFunction)=>{
+                setTimeout(()=>{
+                    news.push(post)
+                    //call the callback function
+                    callbackFunction()
+                },3000)
+            }
+
+
+
+        // call the function addNews() wirh call back function
+        addNews({postTitle:'Fourth title',postContent:' this a fourth content'},showNews)
+        
+
+    </script>
+    
+</body>
+</html>

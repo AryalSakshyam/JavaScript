@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        // map always returns the new array
+        // array value huney jaley samma itterate garcha
+        const nums=[2,4,6,8,10]
+        // define function
+        // function demoFunction(num){
+        //     document.write(`<li>${num}</li>`)
+
+        // }
+        // Kunai function bhitra fuction call garya cha ya method bhitra fuction call garya cha bhaney() na rakhney
+        //map ley empty array ya function ma kaam gardaina 
+        // nums.map(demoFunction)
+        // shortcut method
+        nums.map(function(num){
+            document.write(`<li>${num}</li>`)
+            
+        })
+        document.write(`<br>`)
+        //euta matra parameter cha bhaney  bracket rakhan pardaina ani euta matra function cha bhaney return rakhnu pardaina
+        // const demoFunction=num=>num**2
+        
+        
+        // const newdata=nums.map(demoFunction) 
+        // double bracket bhitra aako cha bhaney function bhanera bujney
+        // const newdata=nums.map(num =>num**3)
+        // document.write(`${newdata}`)
+        document.write(`<br>`)
+        //forEach
+       const abc=[2,4,6,8,10]
+        const newdata=nums.foreach(num)
+        document.write(`${newdata}`)
+        // filter
+        const result=nums.fliter(num=>{
+            return num>4
+
+        })
+        document.write(`${result}`)
+        // recduce
+    </script>
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        // array ----> a container to store multiple values or data
+        // one dimensional array
+        //-----------[   0          1          2         3        4       5 ]
+        const fruits = ['orange', 'mango', 'apple', 'banana', 'kiwi', 'Papaya']
+        document.write(`${fruits}<br>`)
+        // to print specific elemnts from the array use indexing
+        document.write(`${fruits[0]}<br>`)
+        // single sq bracket ley value dincha tesko ni bhitra ko vakue arko sq bracket ley dincha
+        document.write(`${fruits[2]}<br>`)
+        document.write(`${fruits[0][2]}<br>`)
+        // to count the length of an array
+        document.write(`${fruits.length}<br>`)
+        // to remove any value from array
+        // Use pop() 
+        fruits.pop()
+        document.write(`${fruits}<br>`)
+        //Use push() to add new elemt at last position
+        fruits.push('grapes')
+        document.write(`${fruits}<br>`)
+        //shift()---> remove from first position
+        //unshift()---> to add elemnt at fist postion
+
+        //splice() ---> to add or remove multiple elements from specific postion on array
+        //to add only
+        fruits.splice(3, 0, 'lemon', 'watemelon')
+        // 3 is a postion where new element is added from
+        //0 means no any elemnts removed
+        document.write(`${fruits} <br>`)
+
+        // to remove
+        fruits.splice(1, 2)
+        // 1 is the postion from where element is strated to remove
+        // 2 means 2 elements were removed 
+
+        document.write(`${fruits} <br>`)
+
+        // sort()->to add elements on ascending order
+        fruits.sort()
+        document.write(`${fruits} <br>`)
+        // reverse()----> reverse the array elemnts
+        //descending order ma jancha if ekchoti sort() garey pachi
+        fruits.reverse()
+        document.write(`${fruits} <br>`)
+        // slice(start,end)
+        const newFruits= fruits.slice(2,5)
+        document.write(`${newFruits} <br>`)//last ko value chai aaudaina
+
+
+
+
+    </script>
+
+</body>
+
+</html>

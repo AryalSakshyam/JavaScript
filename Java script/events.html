@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <pre>
+        onclick ->when user click the html elements
+        onblclick -> When user doble click in the elements 
+        onsumbit-> When a form is submitted 
+        onchange-> When a input value un the form is changed
+        onload-> When a page is loaded
+        onmouseover-> When a mouse is over the elements
+        onmouseout--> When a mouse moves out from the elements
+        onkeyup-> When a key is typed 
+        onkeydown->when key is typed
+        onmousemove-> when a mouse is moves around the html elements
+    </pre>
+
+    <button onclick="demo()">click here</button>
+    <p id="result"></p>
+    <button ondblclick="double()">Send</button>
+    <p id="review"></p>
+    <button onmouseover="demo1()" onmouseout="demo2()">Hover over me</button>
+    <h3 id="test"></h3>
+    <script>
+        const demo=()=>{
+            //document.write ley HTML ko lai overtie garcha
+            // document.write(new Date())
+            document.getElementById('result').innerHTML=new Date()//DOM method
+        }
+        const double=()=>{
+            document.getElementById('review').innerHTML=new Date()
+
+        }
+        const demo1=()=>{
+                document.getElementById('test').innerHTML="this mouse over"
+            }
+        const demo2=()=>{
+            document.getElementById('test').innerHTML="qwerty"
+        }
+    </script>
+    
+</body>
+</html>

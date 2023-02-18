@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch practice</title>
+</head>
+<body>
+    <script>
+        const x= parseInt(prompt('Enter value of X'))
+        const y= parseInt(prompt('Enter Value of Y'))
+        const z=prompt('Assign Opertator eg:+,-,/,*,%')
+         switch(z){
+            case '+':
+                const a=x+y
+                document.write(`${a} is addition`)
+                break 
+            case '-':
+                 const b=x-y
+                document.write(`${b} is subtraction`)
+                break 
+            case '/':
+                const c= x/y
+                document.write(`${c} is division`)
+                break 
+            case '*':
+                const d= x*y
+                document.write(`${d} is multiplication`)
+                break
+            default:
+                    document.write("Invalid")
+         }
+    </script>
+</body>
+</html>

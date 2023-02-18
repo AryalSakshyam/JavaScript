@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number</title>
+</head>
+<body>
+    <script>
+        const num= 24.3456324
+        //toFixed()--> it is used to show how many values to be printed after decimal points
+        document.write(`${num.toFixed(2)}<br>`)
+        //round of huncha aafai
+        document.write(`${num.toFixed(3)}<br>`)
+        //toPrecision()--> it is used to show how many values to be printed as a whole
+        document.write(`${num.toPrecision(2)}<br>`)
+        document.write(`${num.toPrecision(3)}<br>`)
+        //toExponentail
+        document.write(`${num.toExponential(3)}<br>`)
+        //toString--> convert to string datatype
+        //type casting
+        const x=num.toString() 
+        //use type of to check data type
+        document.write(typeof(x))
+        document.write('<br>')
+        // TO convert string to nummber use following methods
+        //Number()--> it returns integer as well as float number
+        // parseInt()--> it returns only integer
+        //parseFloat()---> it returns integer as well as float value
+        document.write(parseInt("12.5years"))
+        document.write('<br>')
+        document.write(parseFloat("12.5years"))
+        document.write('<br>')
+        document.write(parseFloat(" im 12.5years"))
+        //NaN---> not a number
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

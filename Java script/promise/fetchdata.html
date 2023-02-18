@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch data</title>
+</head>
+
+<body>
+    <script>
+        //API-> Application Programming Interface-> euta server huncha (anywhere) jasko data junsaki platfrom bata ni access garna milcha
+        //Api bata data fetch garna
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            //.then(function akhney yesma) 
+            //.then(res)-> fetch ko value catch garera res ma pathaucha
+            // res.json-> json ma convert
+            .then((res) => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err))
+
+
+    </script>
+
+
+</body>
+
+</html>
